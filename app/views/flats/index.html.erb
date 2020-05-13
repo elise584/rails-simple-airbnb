@@ -22,6 +22,11 @@
             <div class="card-body">
               <%= link_to "More info", flat_path(flat), class: "card-link" %>
               <%= link_to "Edit", edit_flat_path(flat), class: "card-link" %>
+              <%= link_to "Remove",
+              flat_path(flat),
+              method: :delete,
+              data: { confirm: "Are you sure you want to delete this flat?" },
+              class: "card-link" %>
             </div>
           </div>
       <% end %>
