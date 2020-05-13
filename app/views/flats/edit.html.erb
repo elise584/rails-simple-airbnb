@@ -1,5 +1,4 @@
-<div class="container">
-<h3>Add a new Flat</h3>
+<h3>Edit Flat</h3>
 <%= simple_form_for(@flat) do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
@@ -10,4 +9,3 @@
   <%= f.submit class: 'btn btn-primary'%>
   <%= f.button :button, "Cancel", type: "reset", class: "btn btn-danger" %>
 <% end %>
-</div>
