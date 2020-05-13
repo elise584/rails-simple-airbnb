@@ -1,0 +1,23 @@
+<div class="row col-12">
+  <h1><%= "All our #{Flat.count} flats" %></h1>
+</div>
+
+<div class="card-container">
+    <% @flats.each do |flat| %>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://source.unsplash.com/featured/?flat,city" alt="Image exemple">
+          <div class="card-body">
+            <h5 class="card-title"><%= flat.name %></h5>
+            <p class="card-text"><%= flat.address %></p>
+            <div class="details">
+              <i class="fas fa-user-friends"></i><%= flat.number_of_guests %>
+              <i class="fas fa-euro-sign"></i><%= flat.price_per_night %>
+            </div>
+          </div>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+    <% end %>
+</div>
